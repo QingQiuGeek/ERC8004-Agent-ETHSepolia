@@ -2,9 +2,19 @@
 
 [ERC8004 Agent](https://www.8004.org/build)
 
+[我的博客记录](https://blog.aigeek.icu/zh-cn/post/2026/02/%E6%9E%84%E5%BB%BAerc8004agent/)
+
 # QingQiuAgent
 
-test agent created with create-8004-agent
+test agent created with create-8004-agent，效果如下：
+
+![alt text](/img/image-2.png)
+
+![alt text](/img/image-3.png)
+
+![alt text](/img/image-4.png)
+
+![alt text](/img/image-1.png)
 
 ## Quick Start
 
@@ -36,9 +46,9 @@ Your agent wallet: `0x58D13f8E11C283C34D17A8775377ddc753236BA2`
 钱包是在eth sepolia，
 [sepolia etherscan](https://sepolia.etherscan.io/address/0x58D13f8E11C283C34D17A8775377ddc753236BA2)
 
-小狐狸转账测试:
+给钱包地址转账测试:
 
-![](image.png)
+![](/img/image.png)
 
 Get testnet tokens from: https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 
