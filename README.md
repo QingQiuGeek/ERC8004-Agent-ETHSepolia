@@ -1,3 +1,7 @@
+[create-8004-agent](https://www.npmjs.com/package/create-8004-agent)
+
+[ERC8004 Agent](https://www.8004.org/build)
+
 # QingQiuAgent
 
 test agent created with create-8004-agent
@@ -29,8 +33,14 @@ OPENAI_API_KEY=your_openai_key
 
 Your agent wallet: `0x58D13f8E11C283C34D17A8775377ddc753236BA2`
 
-Get testnet tokens from: https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+钱包是在eth sepolia，
+[sepolia etherscan](https://sepolia.etherscan.io/address/0x58D13f8E11C283C34D17A8775377ddc753236BA2)
 
+小狐狸转账测试:
+
+![](image.png)
+
+Get testnet tokens from: https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 
 ### 4. Register on-chain
 
@@ -39,6 +49,7 @@ npm run register
 ```
 
 This will:
+
 - Upload your agent metadata to IPFS
 - Register your agent on Ethereum Sepolia (Testnet)
 - Output your agent ID and 8004scan link
@@ -53,16 +64,20 @@ Test locally: http://localhost:3000/.well-known/agent-card.json
 
 #### Test your agent
 
-\`\`\`bash
+```bash
+
 # Discover agent capabilities
+
 npm run a2a:discover
 
 # Interactive chat mode
+
 npm run a2a:chat
 
 # Run automated tests
+
 npm run a2a:test
-\`\`\`
+```
 
 ### 6. Start the MCP server
 
@@ -92,10 +107,12 @@ Edit `src/register.ts` and uncomment/add before `registerIPFS()`:
 
 ```typescript
 // Add skills (what your agent can do)
-agent.addSkill('natural_language_processing/natural_language_generation/summarization');
+agent.addSkill(
+	'natural_language_processing/natural_language_generation/summarization',
+);
 agent.addSkill('analytical_skills/coding_skills/text_to_code');
 
-// Add domains (areas of expertise)  
+// Add domains (areas of expertise)
 agent.addDomain('technology/software_engineering');
 agent.addDomain('finance_and_business/investment_services');
 ```
@@ -107,6 +124,7 @@ Browse the full taxonomy: https://schema.oasf.outshift.com/0.8.0
 By default, your agent is registered with `active: false`. This is intentional - it lets you test without appearing in explorer listings.
 
 When you're ready for production:
+
 1. Edit `src/register.ts` and change `agent.setActive(false)` to `agent.setActive(true)`
 2. Re-run `npm run register` to update your agent's metadata
 
